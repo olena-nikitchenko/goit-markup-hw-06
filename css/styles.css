@@ -832,7 +832,8 @@
 }
 .modal-checkbox:checked + .modal-checkbox-icon {
   background-color: var(--accent-color);
-  border-color: transparent;
+  border-color: var(--accent-color);
+  background-origin: border-box;
 }
 .btn-modal-form {
   display: block;
