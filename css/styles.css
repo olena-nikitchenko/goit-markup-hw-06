@@ -746,6 +746,7 @@
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
+  text-align: center;
   line-height: calc(23 / 20);
   letter-spacing: 0.03em;
 }
@@ -755,28 +756,52 @@
 .modal-list {
   margin-bottom: 20px;
 }
+.modal-list-item {
+  position: relative;
+}
 .modal-name-form {
   display: flex;
   flex-direction: column;
   margin-bottom: 4px;
+  font-size: 12px;
+  line-height: calc(14 / 12);
 }
 .modal-field-form {
   min-width: 448px;
   min-height: 40px;
-  padding: 8px;
+  padding: 8px 8px;
+  padding-left: 42px;
+  outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border-color 250ms var(--timing-function);
+  color: var(--secondary-text-color);
 }
-.modal-field-form:hover,
+.modal-field-form:last-child {
+  padding: 16px;
+}
+.modal-icon {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 12px;
+  transform: translateY(30%);
+  fill: var(--secondary-text-color);
+  transition: fill 250ms var(--timing-function);
+}
+
 .modal-field-form:focus {
   border-color: var(--accent-color);
+}
+.modal-field-form:focus + .modal-icon {
+  fill: var(--accent-color);
 }
 .textarea-modal {
   resize: none;
 }
 
 .chekbox-block {
+  position: relative;
   display: flex;
   margin-bottom: 30px;
   gap: 7px;
@@ -790,10 +815,24 @@
   text-decoration-line: underline;
   color: var(--accent-color);
 }
+
 .modal-checkbox {
+  appearance: none;
+  position: absolute;
   width: 16px;
   height: 16px;
   margin: 0;
+  margin-right: 8px;
+}
+.modal-checkbox-icon {
+  top: 0;
+  left: 10px;
+  border: 2px solid var(--secondary-text-color);
+  border-radius: 4px;
+}
+.modal-checkbox:checked + .modal-checkbox-icon {
+  background-color: var(--accent-color);
+  border-color: transparent;
 }
 .btn-modal-form {
   display: block;
@@ -805,10 +844,11 @@
   line-height: 30px;
   letter-spacing: 0.06em;
   color: var(--white-text-bg);
-  background: #2196f3;
+  background: var(--accent-color);
   box-shadow: none;
   border-radius: 4px;
   border-color: transparent;
+  border-width: 0;
   transition: box-shadow 250ms var(--timing-function);
 }
 .btn-modal-form:hover {
