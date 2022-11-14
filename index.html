@@ -17,7 +17,6 @@
     />
     <link href="./css/styles.css" rel="stylesheet" />
   </head>
-
   <body class="body">
     <!-- header -->
     <header class="header">
@@ -76,7 +75,7 @@
                 <li class="modal-list-item">
                   <label class="modal-name-form" for="name">Ім'я</label>
                   <input class="modal-field-form" type="text" name="name" id="name" />
-                  <svg class="modal-icon" width="18" height="18">
+                  <svg class="modal-icon modal-icon-person" width="18" height="18">
                     <use href="./images/icons.svg#person"></use>
                   </svg>
                 </li>
@@ -105,16 +104,15 @@
                   ></textarea>
                 </li>
               </ul>
-
               <div class="chekbox-block">
-                <input class="modal-checkbox" type="checkbox" name="topic" value="ok" id="ok" />
-                <svg class="modal-icon modal-checkbox-icon" width="16" height="16">
-                  <use href="./images/icons.svg#icon-check"></use>
-                </svg>
-                <label class="modal-label-checkbox" for="ok"
-                  >Погоджуюся з розсилкою та приймаю
+                <label class="modal-label-checkbox">
+                  <input class="modal-checkbox" type="checkbox" name="topic" value="ok" />
+                  <svg class="modal-icon modal-checkbox-icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-check"></use>
+                  </svg>
+                  Погоджуюся з розсилкою та приймаю
                 </label>
-                <a class="modal-chekbox-link" href="#">Умови договору</a>
+                <a class="modal-chekbox-link link" href="#">Умови договору</a>
               </div>
               <button class="btn-modal-form" type="submit">Відправити</button>
             </form>
